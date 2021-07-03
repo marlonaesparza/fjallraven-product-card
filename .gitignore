@@ -3,5 +3,7 @@ node_modules
 database/s3/config.json
 database/mysql/config.js
 
+public/dist
+
 .env
 
