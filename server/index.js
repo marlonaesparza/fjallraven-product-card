@@ -1,3 +1,5 @@
+require('dotenv').config({path: __dirname + '/../.env'});
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -20,6 +22,7 @@ app.get('/:id', (req, res) => {
   }
 
   if (req.query.proxy) {
+    console.log('Sending bundle.js...');
     res.sendFile(path.resolve(__dirname + '/../public/dist/bundle.js'));
 
   } else {
